@@ -1,0 +1,76 @@
+<h3 *ngIf="!products"> {{title}}</h3>
+<h3 [hidden]="!products"> {{title}}</h3>
+
+
+<!-- <div *ngIf="products; else other">
+    {{title}}
+</div>
+<ng-template #other>
+    başlık yok
+</ng-template>
+
+<ng-container *ngIf="products; then thenTemplate; else elseTemplate">
+    {{title}}
+</ng-container>
+<ng-template #thenTemplate>
+    Herhalukarda
+</ng-template>
+<ng-template #elseTemplate>
+    Başlık yine yok
+</ng-template>
+
+<div [ngSwitch]="switches">
+
+    <div *ngSwitchCase="0">0000</div>
+    <div *ngSwitchCase="1">1111</div>
+    <div *ngSwitchCase="2">2222</div>
+
+</div>
+
+<div *ngFor="let product of products;let i=index">
+    <span class="class{{i}}"> {{product.name}} {{product.price}} {{i}}</span>
+    <div>mahmut</div>
+</div>
+<div *ngFor="let product of products;trackBy : trackByFn">
+    <span> {{product.name}} {{product.price}}</span>
+    <div>mahmut</div>
+</div>
+
+<div *ngFor="let product of products;trackBy : trackByFn">
+    <span> {{product.name}} {{product.price}}</span>
+    <div>mahmut</div>
+</div> -->
+<!-- <div class="row">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+</div> -->
