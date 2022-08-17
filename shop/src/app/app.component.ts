@@ -15,6 +15,8 @@ export class AppComponent implements OnInit{
   inputSearch:any;
 
   constructor(private service:PostService) {}
+  
+//izggggggg
 
   changeRowColor(index: number) {
     alert("Button is clicked");
