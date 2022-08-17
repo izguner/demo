@@ -8,25 +8,28 @@
   </div>
 </div> -->
 <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Blabla"  aria-describedby="button-addon2">
+  <input [(ngModel)]="inputSearch" type="text" class="form-control" placeholder="Blabla" aria-describedby="button-addon2">
   <div class="input-group-append">
-    <button  class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+    <button   class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
   </div>
 </div>
-<table class="table">
+<!-- [ngStyle]="{'background-color':'green'}" -->
+{{inputSearch}}
+<table class="table" >
   <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">Id</th>
-      <th scope="col">Title</th>
+      <th scope="col" class="kirmizi-title">Title</th>
       <th scope="col">Description</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let post of posts">
-      <th scope="row">1</th>
+    <tr *ngFor="let post of posts; let i = index" >
+      <th >{{i}}</th>
       <td >{{post.id}}</td>
-      <td class="kirmiziTitle">{{post.title}}</td>
+      <td *ngIf="inputSearch==i" class="green-background">{{post.title}}</td>
+      <td *ngIf="inputSearch!=i">{{post.title}}</td>
       <td>{{post.description}}</td>
     </tr>
   </tbody>
